@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+section {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(320deg,#f27121,#e94057,#8a2387);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 30rem;
+    text-align: center;
+    color: black;
+
+    /* From https://css.glass */
+    /* background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3); */
+    background: rgba(255, 255, 255, .5);
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.main-container:before {
+    content: '';
+    position: absolute;
+    background: rgba(255, 255, 255, .15);
+    inset: 0;
+    transform: rotate(-5deg);
+    z-index: -1;
+}
+
+.heading {
+    padding: 3rem;
+}
+
+.heading h1 {
+    font-size: 2rem;
+}
+
+.heading h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-top: 1rem;
+}
+
+.options {
+    padding: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+button {
+    font-family: 'Vazirmatn', sans-serif;
+    width: 175px;
+    padding: 1rem 0;
+    flex-grow: 1;
+    cursor: pointer;
+    color: white;
+    font-size: 1.1rem;
+    background: rgb(12, 32, 97);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 5px 0px rgb(21, 48, 134);
+    transition: all .3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 2px 8px 0px rgb(21, 48, 134);
+}
+
+.info-container p {
+    color: rgb(12, 32, 97);;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 2rem;
+}
